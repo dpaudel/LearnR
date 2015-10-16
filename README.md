@@ -11,3 +11,10 @@ This works in both directions
 Merge the 2 files but keep header from only first file. </h5>
 
 ```awk 'FNR==1 && NR!=1{next;}{print}' *.txt > myGBSProject_key.txt```
+
+<h5>Replace characters</h5>
+
+```sed -i 's/old/new/g' filename.fasta``` # replaces old with new
+
+```sed -i 's/old//g' filename.fasta``` # removes old
+
