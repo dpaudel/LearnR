@@ -3,8 +3,9 @@
 <h5>
 Copy file from windows commandline to hipergator </h5>
 
-```pscp source_file_name paudel@gator.hpc.ufl.edu:/lfs/scratch/paudel/flowering2```
+```pscp source_file_name paudel@gator.hpc.ufl.edu:/lfs/scratch/paudel/flowering2``` #from local to server
 
+```pscp paudel@gator.hpc.ufl.edu:/lfs/scratch/paudel/flowering2/*.* .``` #from server to local
 This works in both directions
 
 <h5>
