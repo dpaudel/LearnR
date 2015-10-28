@@ -19,3 +19,9 @@ Merge the 2 files but keep header from only first file. </h5>
 
 ```sed -i 's/old//g' filename.fasta``` # removes old
 
+<h5> Using variables in bash </h5>
+```
+#!/bin/bash          
+STR="Hello World!"
+echo $STR 
+```
