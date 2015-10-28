@@ -25,3 +25,5 @@ Merge the 2 files but keep header from only first file. </h5>
 STR="Hello World!"
 echo $STR 
 ```
+<h5>grep for multiple patterns</h5>
+``` grep "early\|late" myProject_key.txt > pooledkey.txt```
