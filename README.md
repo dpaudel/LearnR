@@ -26,4 +26,6 @@ STR="Hello World!"
 echo $STR 
 ```
 <h5>grep for multiple patterns</h5>
-``` grep "early\|late" myProject_key.txt > pooledkey.txt```
+``` grep "early\|late" filename.txt > pattern.txt```
+<h5>Find number of columns in a file</h5>
+```awk '{print NF}' filename.txt | sort -nu | tail -n 1```
