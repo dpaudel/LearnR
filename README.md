@@ -21,7 +21,7 @@ Merge the 2 files but keep header from only first file. </h5>
 
 <h5> Using variables in bash </h5>
 ```
-#!/bin/bash          
+#!/bin/bash
 STR="Hello World!"
 echo $STR 
 ```
