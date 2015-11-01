@@ -29,3 +29,5 @@ echo $STR
 ``` grep "early\|late" filename.txt > pattern.txt```
 <h5>Find number of columns in a file</h5>
 ```awk '{print NF}' filename.txt | sort -nu | tail -n 1```
+<h5>Store stdin into a txt file and append to it</h5>
+```command | tee -a log.txt```
