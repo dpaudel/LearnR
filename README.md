@@ -31,3 +31,6 @@ echo $STR
 ```awk '{print NF}' filename.txt | sort -nu | tail -n 1```
 <h5>Store stdin into a txt file and append to it</h5>
 ```command | tee -a log.txt```
+
+<h5>Replace #### in vcf file with ##</h5>
+sed -i 's/####/##/' myGBSGenos_chr*.vcf
