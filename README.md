@@ -37,3 +37,5 @@ echo $STR
 
 <h5>Count number of raw reads per barcode in gbs data</h5>
 ```awk 'substr($1,2,9)~/TGACGCCA/' C7U82ANXX_7_fastq | wc -l```
+
+```perl -ne 'print if( (/@/ && ($end=1))..!$end-- )' C7U82ANXX_7_fastq | grep -v "@"| awk 'substr($1,2,9)~/TGACGCCA/' | tee -a test1adapter.txt```
