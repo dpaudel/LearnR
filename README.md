@@ -33,4 +33,4 @@ echo $STR
 ```command | tee -a log.txt```
 
 <h5>Replace #### in vcf file with ##</h5>
-sed -i 's/####/##/' myGBSGenos_chr*.vcf
+```sed -i 's/####/##/' myGBSGenos_chr*.vcf```
