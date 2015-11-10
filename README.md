@@ -34,3 +34,6 @@ echo $STR
 
 <h5>Replace #### in vcf file with ##</h5>
 ```sed -i 's/####/##/' myGBSGenos_chr*.vcf```
+
+<h5>Count number of raw reads per barcode in gbs data</h5>
+```awk 'substr($1,2,9)~/TGACGCCA/' C7U82ANXX_7_fastq | wc -l```
