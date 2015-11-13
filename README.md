@@ -43,5 +43,5 @@ echo $STR
 
 <h5>Get names of progenies from all files to be used in STACKS</h5>
 ```
-for i in *.fq; do echo -n " -r $i"; done
+for i in *.fq; do echo -n " -r ./samples_7/$i"; done
 ```
