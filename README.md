@@ -39,3 +39,9 @@ echo $STR
 ```awk 'substr($1,2,9)~/TGACGCCA/' C7U82ANXX_7_fastq | wc -l```
 
 ```perl -ne 'print if( (/@/ && ($end=1))..!$end-- )' C7U82ANXX_7_fastq | grep -v "@"| awk 'substr($1,2,9)~/TGACGCCA/' | tee -a test1adapter.txt```
+#Use stacks instead :)
+
+<h5>Get names of progenies from all files to be used in STACKS</h5>
+```
+for i in *.fq; do echo -n " -r $i"; done
+```
