@@ -1,4 +1,11 @@
 # cheatsheet
+<h5>Sort filenames by date with ```ls``` </h5>
+
+```
+ls -t
+ls -tr #reverse
+```
+
 <h5>Change file permission</h5>
 
 ```
