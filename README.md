@@ -1,5 +1,5 @@
 # cheatsheet
-<h5>Sort filenames by date with </h5> ```ls```
+<h5>Sort filenames by date(time) with ls</h5>
 
 ```
 ls -t
