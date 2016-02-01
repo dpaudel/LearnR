@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Change file permission</h5>
+
+```
+chmod 777 *.*
+chmod -R /dirname
+```
 
 <h5>
 Copy file from windows commandline to hipergator </h5>
