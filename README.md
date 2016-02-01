@@ -3,7 +3,7 @@
 
 ```
 chmod 777 *.*
-chmod -R /dirname
+chmod 777 -R /dirname
 ```
 
 <h5>
