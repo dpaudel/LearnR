@@ -2,8 +2,8 @@
 <h5>Sort filenames by date(time) with ls</h5>
 
 ```
-ls -t
-ls -tr #reverse
+ls -l -t
+ls -l -tr #reverse
 ```
 
 <h5>Change file permission</h5>
