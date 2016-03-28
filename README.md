@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>Sum integers on 2nd column of a file</h5>
+```
+awk '{s+=$2} END {print s}' 454AllContigs.fna_length_distribution.txt
+```
 <h5>Sort filenames by date(time) with ls</h5>
 
 ```
