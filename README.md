@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>View the size of all directories</h5>
+```
+du sh *
+```
 <h5>Sum integers on 2nd column of a file</h5>
 ```
 awk '{s+=$2} END {print s}' 454AllContigs.fna_length_distribution.txt
