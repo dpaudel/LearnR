@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>R: store output within functions
+```
+fn1<- function (x) { 
+  result= "#work"
+  dput(result)
+}
+```
+
 <h5>View the size of all directories</h5>
 ```
 du sh *
