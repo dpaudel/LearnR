@@ -1,5 +1,5 @@
 # cheatsheet
-<h5>R: store output within functions
+<h5>R: store output within functions</h5>
 
 ```
 fn1<- function (x) { 
