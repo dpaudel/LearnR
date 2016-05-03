@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Use GUI of Rstudio on hiperGator</h5>
+```
+gui.hpc.ufl.edu # on mobaXterm
+module load rstudio
+rstudio
+```
+
+
 <h5>R: store output within functions</h5>
 
 ```
