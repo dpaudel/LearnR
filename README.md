@@ -1,4 +1,14 @@
 # cheatsheet
+<h5>R > Store results from a loop into a dataframe</h5>
+Before loop
+```
+d=NULL
+```
+Inside loop
+```
+d=rbind(d, data.frame(locus, name, allele1[[i]],allele2[[i]],total[[i]],group))
+```
+
 <h5>Use GUI of Rstudio on hiperGator</h5>
 ```
 gui.hpc.ufl.edu # on mobaXterm
