@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>View .gz files without decompressing</h5>
+```
+gzip -cd file.gz | head
+```
+
 <h5>R > Store results from a loop into a dataframe</h5>
 Before loop
 ```
