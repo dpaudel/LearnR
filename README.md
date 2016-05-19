@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>Convert csv to tab separated file</h5>
+```
+sed -e 's/,/\t/g' barcodecsv.txt > barcode_tab.txt
+```
 <h5>View .gz files without decompressing</h5>
 ```
 gzip -cd file.gz | head
