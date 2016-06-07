@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Increase java heap memory</h5>
+```
+export _JAVA_OPTIONS="-Xms1g -Xmx32g"
+```
+
 <h5>Convert csv to tab separated file</h5>
 ```
 sed -e 's/,/\t/g' barcodecsv.txt > barcode_tab.txt
