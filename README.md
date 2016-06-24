@@ -1,4 +1,14 @@
 # cheatsheet
+<h5>Add colors to directories in bash</h5>
+```
+nano ~/.bashrc
+```
+````
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+
+```
 <h5>Increase java heap memory</h5>
 ```
 export _JAVA_OPTIONS="-Xms1g -Xmx32g"
