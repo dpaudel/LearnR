@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Print the lines where column 5 has a , in it </h5>
+```
+awk '$5 ~/,/' file.vcf'
+```
+
 <h5>Add colors to directories in bash</h5>
 ```
 nano ~/.bashrc
