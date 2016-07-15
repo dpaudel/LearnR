@@ -2,7 +2,8 @@
 <h5>Login to a specific directory instead of home</h5>
 ```
 nano ~/.bashrc
-
+```
+```
 foo() { cd "/ufrc/group/user" ; }
 foo
 ```
