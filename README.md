@@ -1,4 +1,11 @@
 # cheatsheet
+<h5>Login to a specific directory instead of home</h5>
+```
+nano ~/.bashrc
+
+foo() { cd "/ufrc/group/user" ; }
+foo
+```
 <h5>Print the lines where column 5 has a , in it </h5>
 ```
 awk '$5 ~/,/' file.vcf'
