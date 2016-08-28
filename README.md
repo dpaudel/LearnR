@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Combine rows when the column names are different</h5>
+```
+library(plyr)
+mergedtest<-rbind.fill(test1,test2)
+```
 <h5>Transpose rows into columns</h5>
 ```
 awk '
