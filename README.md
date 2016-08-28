@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>Add some name prior to 1 column </h5>
+```
+awk '$1="Crop_"$35' file.txt > file_named.txt
+```
 <h5>Combine rows when the column names are different</h5>
 ```
 library(plyr)
