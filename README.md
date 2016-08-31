@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Get non-duplicate names</h5>
+```
+cat names.txt | uniq -u 
+```
+
 <h5>Add some name prior to 1 column </h5>
 ```
 awk '$1="Crop_"$35' file.txt > file_named.txt
