@@ -1,5 +1,5 @@
 # cheatsheet
-<h5>Get non-duplicate names</h5>
+<h5>Get non-duplicate names </h5>
 ```
 cat names.txt | uniq -u 
 ```
