@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>R: set . and - to NA while reading data</h5>
+```
+read.csv("file.csv", na.strings=c(".","-"))
+```
+
 <h5>Get non-duplicate names </h5>
 ```
 cat names.txt | uniq -u 
