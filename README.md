@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Get number of nucleotide for each sequence in a fasta file</h5>
+```
+samtools faidx sample.fa
+cut -f1-2 sample.fa.fai
+```
 <h5>R: set . and - to NA while reading data</h5>
 ```
 read.csv("file.csv", na.strings=c(".","-"))
