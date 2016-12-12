@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Stamp today's date by using today in filenames</h5>
+```
+nano ~/.bashrc
+today=$(date +"%F")
+nano file_today
+```
 <h5>Get number of nucleotide for each sequence in a fasta file</h5>
 ```
 samtools faidx sample.fa
