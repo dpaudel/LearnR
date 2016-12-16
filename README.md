@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Remove spaces & blank lines in a file</h5>
+```
+sed -i '/^ *$/d' 3markermap.txt
+```
+<h5>Fix problem of head showing only 1 line </h5>
+```
+sed -i.bak 's/\r$//; s/\r/\n/g' 3markermap.txt
+```
 <h5>Stamp today's date by using today in filenames</h5>
 ```
 nano ~/.bashrc
