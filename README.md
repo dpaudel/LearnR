@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>Extract fasta from Tassel</h5>
+```
+grep -v "@" ../../myAlignedMasterTags.sam|awk '$4>=56260{print}'| awk '$4<=56380{print}'| head
+```
 <h5>Remove spaces & blank lines in a file</h5>
 ```
 sed -i '/^ *$/d' 3markermap.txt
