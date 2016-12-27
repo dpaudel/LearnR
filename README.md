@@ -1,4 +1,8 @@
 # cheatsheet
+<h5>Rename uneak tags to give a number to each tag</h5>
+```
+ awk '{print NR,$0}' napiergrass_uneaktagsc.fa |awk '{print ">"$1"\n"$2}'>napiergrass_uneaktags_count.fa
+ ```
 <h5>Extract fasta from Tassel</h5>
 ```
 grep -v "@" ../../myAlignedMasterTags.sam|awk '$4>=56260{print}'| awk '$4<=56380{print}'| head
