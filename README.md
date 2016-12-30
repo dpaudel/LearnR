@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Blast output tabular headers</h5>
+```
+queryId, subjectId, percIdentity, alnLength, mismatchCount, gapOpenCount, queryStart, queryEnd, subjectStart, subjectEnd, eVal, bitScore
+```
+
 <h5>Rename uneak tags to give a number to each tag</h5>
 ```
  awk '{print NR,$0}' napiergrass_uneaktagsc.fa |awk '{print ">"$1"\n"$2}'>napiergrass_uneaktags_count.fa
