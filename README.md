@@ -1,4 +1,5 @@
 # cheatsheet
+
 <h5>Check if bam file is sorted or not</h5>
 ```
 zcat rd_36c20.bam.gz | samtools view -H
