@@ -1,4 +1,13 @@
 # cheatsheet
+<h5>Check if bam file is sorted or not</h5>
+```
+zcat rd_36c20.bam.gz | samtools view -H
+IF sorted: @HD     VN:1.5  SO:coordinate
+IF unsorted: @HD    VN:1.0    SO:unsorted
+
+```
+
+
 <h5>Blast output tabular headers</h5>
 ```
 queryId, subjectId, percIdentity, alnLength, mismatchCount, gapOpenCount, queryStart, queryEnd, subjectStart, subjectEnd, eVal, bitScore
