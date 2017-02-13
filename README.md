@@ -41,6 +41,9 @@ nano file_today
 samtools faidx sample.fa
 cut -f1-2 sample.fa.fai
 ```
+```
+head file.fasta -n 2| grep -v ">" | wc | awk '{print $3-$1}'
+```
 <h5>R: set . and - to NA while reading data</h5>
 ```
 read.csv("file.csv", na.strings=c(".","-"))
