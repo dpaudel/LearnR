@@ -149,8 +149,8 @@ fn1<- function (x) {
 
 <h5>View the size of all directories</h5>
 ```
-du sh *
-du sh * | sort -hr
+du -sh *
+du -sh * | sort -hr
 ```
 <h5>Sum integers on 2nd column of a file</h5>
 ```
