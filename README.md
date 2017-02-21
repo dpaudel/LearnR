@@ -11,7 +11,10 @@ XA: to report alternative sites and SA is a new flag to tag so-called split alig
 ```
 samtools view -h -q 1 -F 4 -F 256 sortedbamfile | grep -v XA:Z | grep -v SA:Z | samtools view -b - > sortedanduniquelymappedbamfile
 ```
-
+<h6>bowtie2</h6>
+```
+grep -E "@|NM:" 4c11_bt2_vsl.sam | grep -v "XS:" | grep -v "@"| wc -l
+```
 
 <h5>Check if bam file is sorted or not</h5>
 ```
