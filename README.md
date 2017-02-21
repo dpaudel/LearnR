@@ -1,4 +1,17 @@
 # cheatsheet
+<h5>Extract uniquely mapped reads from bam files </h5>
+<h6>bwa-aln</h6>
+If you read the SAM format, every tag starting with X,Y,Z is reserved to the particular tool. And in bwa-aln, Heng Li decided to assign XT:R to reads multi-mapping. So you filter for unique ones (XT:A:U) and still some reads would have very few alternative sites (so you filter out those ones having XA alternative sites), leaving you with unique reads.
+```
+ samtools view -h -q 1 -F 4 -F 256 sortedbamfile | grep "^@|XT:A:U" | grep -v XA: | samtools view -b - > sortedanduniquelymappedbamfile
+```
+<h6>bwa-mem</h6>
+Bwa-mem is a bit different. XT:R doesn't exist and you map with -M to get backwards compatibility to Picard. Picard does not support the newest 2048 flag but the 256 one for secondary alignments. So you first do the same samtools view filter, getting rid of not mapped reads and secondary alignments. But in bwa-mem, the tags have changed!
+XA: to report alternative sites and SA is a new flag to tag so-called split alignments for chimera reads.
+```
+samtools view -h -q 1 -F 4 -F 256 sortedbamfile | grep -v XA:Z | grep -v SA:Z | samtools view -b - > sortedanduniquelymappedbamfile
+```
+
 
 <h5>Check if bam file is sorted or not</h5>
 ```
