@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Get only top blast hit</h5>
+```
+blastn -db trop -query blast.fa -outfmt "6 qseqid sseqid" -max_target_seqs 1 -out results.txt
+sort -u results.txt > singlehit.txt
+```
+```
+blastn -db trop -query blast.fa -outfmt "6 qseqid sseqid" -max_target_seqs 1 | sort -u > singlehit.txt
+```
 <h5>Extract uniquely mapped reads from bam files </h5>
 <h6>bwa-aln</h6>
 If you read the SAM format, every tag starting with X,Y,Z is reserved to the particular tool. And in bwa-aln, Heng Li decided to assign XT:R to reads multi-mapping. So you filter for unique ones (XT:A:U) and still some reads would have very few alternative sites (so you filter out those ones having XA alternative sites), leaving you with unique reads.
