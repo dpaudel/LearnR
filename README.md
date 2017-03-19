@@ -62,22 +62,30 @@ queryId, subjectId, percIdentity, alnLength, mismatchCount, gapOpenCount, queryS
 grep -v "@" ../../myAlignedMasterTags.sam|awk '$4>=56260{print}'| awk '$4<=56380{print}'| head
 
 ```
+
 <h5>Remove spaces & blank lines in a file</h5>
+
 
 ```
 sed -i '/^ *$/d' 3markermap.txt
 ```
+
 <h5>Fix problem of head showing only 1 line </h5>
+
 ```
 sed -i.bak 's/\r$//; s/\r/\n/g' 3markermap.txt
 ```
+
 <h5>Stamp today's date by using today in filenames</h5>
+
 ```
 nano ~/.bashrc
 today=$(date +"%F")
 nano file_today
 ```
+
 <h5>Get number of nucleotide for each sequence in a fasta file</h5>
+
 ```
 samtools faidx sample.fa
 cut -f1-2 sample.fa.fai
@@ -85,25 +93,32 @@ cut -f1-2 sample.fa.fai
 ```
 head file.fasta -n 2| grep -v ">" | wc | awk '{print $3-$1}'
 ```
+
 <h5>R: set . and - to NA while reading data</h5>
+
 ```
 read.csv("file.csv", na.strings=c(".","-"))
 ```
 
 <h5>Get non-duplicate names </h5>
+
 ```
 cat names.txt | uniq -u 
 ```
 
 <h5>Add some name prior to 1 column </h5>
+
 ```
 awk '$1="Crop_"$35' file.txt > file_named.txt
 ```
+
 <h5>Combine rows when the column names are different</h5>
+
 ```
 library(plyr)
 mergedtest<-rbind.fill(test1,test2)
 ```
+
 <h5>Transpose rows into columns</h5>
 ```
 awk '
@@ -125,6 +140,7 @@ END {
 ```
 
 <h5>Login to a specific directory instead of home</h5>
+
 ```
 nano ~/.bashrc
 ```
@@ -132,12 +148,15 @@ nano ~/.bashrc
 foo() { cd "/ufrc/group/user" ; }
 foo
 ```
+
 <h5>Print the lines where column 5 has a , in it </h5>
+
 ```
 awk '$5 ~/,/' file.vcf'
 ```
 
 <h5>Add colors to directories in bash</h5>
+
 ```
 nano ~/.bashrc
 ```
@@ -147,31 +166,40 @@ eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
 
 ```
+
 <h5>Increase java heap memory</h5>
+
 ```
 export _JAVA_OPTIONS="-Xms1g -Xmx32g"
 ```
 
 <h5>Convert csv to tab separated file</h5>
+
 ```
 sed -e 's/,/\t/g' barcodecsv.txt > barcode_tab.txt
 ```
+
 <h5>View .gz files without decompressing</h5>
+
 ```
 gzip -cd file.gz | head
 ```
 
 <h5>R > Store results from a loop into a dataframe</h5>
 Before loop
+
 ```
 d=NULL
 ```
+
 Inside loop
+
 ```
 d=rbind(d, data.frame(locus, name, allele1[[i]],allele2[[i]],total[[i]],group))
 ```
 
 <h5>Use GUI of Rstudio on hiperGator</h5>
+
 ```
 gui.hpc.ufl.edu # on mobaXterm
 module load rstudio
