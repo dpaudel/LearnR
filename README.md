@@ -1,32 +1,41 @@
 # cheatsheet
 <h5>Get only top blast hit</h5>
+
 ```
 blastn -db trop -query blast.fa -outfmt "6 qseqid sseqid" -max_target_seqs 1 -out results.txt
 sort -u results.txt > singlehit.txt
 ```
+
 ```
 blastn -db trop -query blast.fa -outfmt "6 qseqid sseqid" -max_target_seqs 1 | sort -u > singlehit.txt
 ```
+
 <h5>Extract uniquely mapped reads from bam files </h5>
 <h6>bwa-aln</h6>
 If you read the SAM format, every tag starting with X,Y,Z is reserved to the particular tool. And in bwa-aln, Heng Li decided to assign XT:R to reads multi-mapping. So you filter for unique ones (XT:A:U) and still some reads would have very few alternative sites (so you filter out those ones having XA alternative sites), leaving you with unique reads.
+
 ```
 samtools view -F 4 bwa_4c11aln.sam | grep "XT:A:U" | grep -v "XA:" | wc -l
 ```
+
 <h6>bwa-mem</h6>
 Bwa-mem is a bit different. XT:R doesn't exist and you map with -M to get backwards compatibility to Picard. Picard does not support the newest 2048 flag but the 256 one for secondary alignments. So you first do the same samtools view filter, getting rid of not mapped reads and secondary alignments. But in bwa-mem, the tags have changed!
 XA: to report alternative sites and SA is a new flag to tag so-called split alignments for chimera reads.
+
 ```
 samtools view -F 4 bwa_4c11mem.sam | grep -v "XA:Z" | grep -v "SA:Z" | wc -l
 ```
+
 BWA-SW was designed for long-reads and has been superseded by bwa-mem.
 
 <h6>bowtie2</h6>
+
 ```
 grep -E "@|NM:" 4c11_bt2_vsl.sam | grep -v "XS:" | grep -v "@"| wc -l
 ```
 
 <h5>Check if bam file is sorted or not</h5>
+
 ```
 zcat rd_36c20.bam.gz | samtools view -H
 IF sorted: @HD     VN:1.5  SO:coordinate
@@ -36,19 +45,25 @@ IF unsorted: @HD    VN:1.0    SO:unsorted
 
 
 <h5>Blast output tabular headers</h5>
+
 ```
 queryId, subjectId, percIdentity, alnLength, mismatchCount, gapOpenCount, queryStart, queryEnd, subjectStart, subjectEnd, eVal, bitScore
 ```
 
 <h5>Rename uneak tags to give a number to each tag</h5>
+
 ```
  awk '{print NR,$0}' napiergrass_uneaktagsc.fa |awk '{print ">"$1"\n"$2}'>napiergrass_uneaktags_count.fa
  ```
+ 
 <h5>Extract fasta from Tassel</h5>
+
 ```
 grep -v "@" ../../myAlignedMasterTags.sam|awk '$4>=56260{print}'| awk '$4<=56380{print}'| head
+
 ```
 <h5>Remove spaces & blank lines in a file</h5>
+
 ```
 sed -i '/^ *$/d' 3markermap.txt
 ```
