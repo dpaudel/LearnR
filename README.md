@@ -120,6 +120,7 @@ mergedtest<-rbind.fill(test1,test2)
 ```
 
 <h5>Transpose rows into columns</h5>
+
 ```
 awk '
 { 
@@ -160,11 +161,11 @@ awk '$5 ~/,/' file.vcf'
 ```
 nano ~/.bashrc
 ```
+
 ````
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
-
 ```
 
 <h5>Increase java heap memory</h5>
