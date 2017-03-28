@@ -1,4 +1,19 @@
 # cheatsheet
+<h5>Google form number of words regex</h5>
+
+```
+new
+^(?:\b\w+\b[\s\r\n!"#$%&'()*+,-./:;<=>?@\[\]^_`{|}~]*){1,300}$
+
+
+^\W*(\w+(\W+|$)){1,300}$
+
+[\s]{1,299}
+
+Final
+^[-\w]+(?:\W+[-\w]+){1,300}\W*$
+```
+
 <h5>Get only top blast hit</h5>
 
 ```
