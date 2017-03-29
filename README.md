@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Get unique values in 2 files</h5>
+
+```
+grep -F -x -v -f file_1 file_2 
+```
+
 <h5>Google form number of words regex</h5>
 
 ```
