@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Convert tab to csv</h5>
+
+```
+perl -lpe 's/"/""/g; s/^|$/"/g; s/\t/","/g' < input.tab > output.csv
+```
+
 <h5>Get unique values in 2 files</h5>
 
 ```
