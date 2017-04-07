@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Open display on windows bash</h5>
+
+```
+Open Xming
+export DISPLAY=:0
+java -jar -Xms1024m -Xmx1024m jspecies1.2.1.jar
+```
+
 <h5>Convert tab to csv</h5>
 
 ```
