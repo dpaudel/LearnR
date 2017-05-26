@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Change prompt display on bash to $ instead of long directory name</h5>
+```
+PS1="$"
+```
+
 <h5>Open display on windows bash</h5>
 
 ```
