@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Case insensitive grep</h5>
+
+```
+ grep -i TGTTTCACGTGAAACA 06.fixstart.fasta
+ ```
+ 
 <h5>Change prompt display on bash to $ instead of long directory name</h5>
 
 ```
