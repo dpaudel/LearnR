@@ -4,8 +4,6 @@
 
 ```
 module load imagemagick/6.8.8-9
-
-<h5>Case insensitive grep</h5>
 convert headgeno5b.LD_D.bmp headgeno5ld.jpg
 ```
 <h5>Case insensitive grep</h5>
