@@ -1,6 +1,11 @@
 # cheatsheet
-<h5>Case insensitive grep</h5>
+<h5>Convert bmp to jpg</h5>
 
+```
+module load imagemagick/6.8.8-9
+
+<h5>Case insensitive grep</h5>
+convert headgeno5b.LD_D.bmp headgeno5ld.jpg
 ```
  grep -i TGTTTCACGTGAAACA 06.fixstart.fasta
  ```
