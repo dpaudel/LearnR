@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>View lines from 43rd line</h5>
+
+```
+tail -n +43 file.txt
+```
 
 <h5>Convert bmp to jpg</h5>
 
