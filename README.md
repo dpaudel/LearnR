@@ -313,15 +313,16 @@ This works in both directions
 awk 'FNR==1 && NR!=1{next;}{print}' *.txt > myGBSProject_key.txt
 ```
 
-<h5>Replace characters</h5>
+<h5>Replace characters</h5>replaces old with new
 
 ```
 sed -i 's/old/new/g' filename.fasta
-``` # replaces old with new
+```
 
 ```
 sed -i 's/old//g' filename.fasta
-``` # removes old
+``` 
+# removes old
 
 <h5> Using variables in bash </h5>
 
