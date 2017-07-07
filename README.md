@@ -219,13 +219,13 @@ awk '$5 ~/,/' file.vcf'
 
 ```
 nano ~/.bashrc
-```
 
-````
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
+
 ```
+
 
 <h5>Increase java heap memory</h5>
 
