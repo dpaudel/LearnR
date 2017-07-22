@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Rename SSR to a fasta format</h5>
+
+```
+awk '//{print ">F_ngssr" ++i;}{print; next}' < forward_1926.txt > forward_1926.fasta
+awk '//{print ">R_ngssr" ++i;}{print; next}' < reverse_1926.txt > reverse_1926.fasta
+
+```
+
 <h5>View lines from 43rd line</h5>
 
 ```
