@@ -1,5 +1,5 @@
 # cheatsheet
-<h5>Rename SSR to a fasta format</h5>
+<h5>Rename fasta files with numbers per line</h5>
 
 ```
 awk '//{print ">F_ngssr" ++i;}{print; next}' < forward_1926.txt > forward_1926.fasta
