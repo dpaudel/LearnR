@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Replace special characters - use backslash </h5>
+
+```
+sed  's/\.\/\.\/\.\/\.\/\.\/\.\/\.\/\.\/\.\/\.\/\.\/\./\.\/\.\/\.\/\.\/\.\/\.\/\.\/\./g' file.txt
+```
+
 <h5>Rename fasta files with numbers per line</h5>
 
 ```
