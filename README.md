@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Remove line breaks eg in fasta file</h5>
+
+```
+tr -d '\n' < file.fasta 
+```
+
 <h5>Replace special characters - use backslash </h5>
 
 ```
