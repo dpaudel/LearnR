@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Convert matrix to numeric matrix</h5>
+
+```
+mmat<- matrix(as.numeric(unlist(mat1)),nrow=nrow(mat))
+```
+
 <h5>Remove line breaks eg in fasta file</h5>
 
 ```
