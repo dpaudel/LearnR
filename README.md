@@ -1,4 +1,25 @@
 # cheatsheet
+<h5>Construct Incomplete Block Design in R</h5>
+
+```
+library(agricolae)
+trt<-1:200
+t <- length(trt)
+# size block k
+k<-4
+# Blocks s
+s<-t/k
+# replications r
+r <- 3
+outdesign<- design.alpha(trt,k,r,serie=2)
+book<-outdesign$book
+plots<-book[,1]
+dim(plots)<-c(k,s,r)
+for (i in 1:r) print(t(plots[,,i]))
+outdesign$sketch
+
+```
+
 <h5>Convert matrix to numeric matrix</h5>
 
 ```
