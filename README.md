@@ -6,7 +6,7 @@ library(agricolae)
 trt<-1:200
 t <- length(trt)
 # size block k
-k<-4
+k<-10
 # Blocks s
 s<-t/k
 # replications r
