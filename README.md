@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Print all columns except the first two from a file </h5>
+
+```
+awk '{$1=$2=""; print $0}' file.txt
+```
+
 <h5>Construct Incomplete Block Design in R</h5>
 
 ```
