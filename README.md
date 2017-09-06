@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Find how many cores is the current job using</h5>
+
+```
+squeue -o"%.7i %.9P %.8j %.8u %.2t %.10M %.6D %C" | grep "dev.p"
+```
+
 <h5>Print all columns except the first two from a file </h5>
 
 ```
