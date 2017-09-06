@@ -3,6 +3,7 @@
 
 ```
 squeue -o"%.7i %.9P %.8j %.8u %.2t %.10M %.6D %C" | grep "dev.p"
+squeue --Format=jobid,username,account,statecompact,starttime,timelimit,numcpus | grep "dev.pa "
 ```
 
 <h5>Print all columns except the first two from a file </h5>
