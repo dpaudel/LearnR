@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>R coerce numeric factor to a numeric variable</h5>
+
+```
+ld_data$LD <- as.numeric(as.character(ld_data$LD))
+```
+
 <h5>Find how many cores is the current job using</h5>
 
 ```
