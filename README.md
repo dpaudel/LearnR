@@ -1,4 +1,11 @@
 # cheatsheet
+<h5>R set transparent points in scatterplot</h5>
+
+```
+ggplot(ld.df, aes(distance,LD.data))+
+  geom_point(alpha=1/10, col="blue")
+```
+  
 <h5>R coerce numeric factor to a numeric variable</h5>
 
 ```
