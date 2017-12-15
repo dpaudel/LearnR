@@ -1,4 +1,11 @@
 # cheatsheet
+
+<h5>Remove pattern and 1 line immediately preceeding the pattern. This is used to remove probes that are repeat masked</h5>
+
+```
+sed -s 'N;/pattern/!P;D' repeatN.fasta #for masked repeats, pattern= N
+```
+
 <h5>R set transparent points in scatterplot</h5>
 
 ```
