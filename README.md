@@ -1,5 +1,12 @@
 # cheatsheet
 
+<h5>Multiple calculation using awk<h5>
+
+```
+grep -v "#" oblast_flower| awk '{if ($3 >99.9 && $4 > 100)  {print}}' | head
+# && = AND; || = OR
+```
+
 <h5>Remove pattern and 1 line immediately preceeding the pattern. This is used to remove probes that are repeat masked</h5>
 
 ```
