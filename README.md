@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Extract based on non-duplicate names on column 1</h5>
+
+```
+awk '{k=($1 FS $2 FS $3 FS $4)} {a[$1]++;b[$1]=k}END{for(x in a)if(a[x]==1)print b[x]}' oblat-FLprobes_80.out > oblat-FLprobes_80uniq.out
+```
 
 <h5>Multiple calculation using awk<h5>
 
