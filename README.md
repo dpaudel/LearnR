@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Get maximum value in a column</h5>
+
+```
+awk 'BEGIN {max = 0} {if ($5>max) max=$5} END {print max}' 6666666.283533.gff
+```
+
 <h5>Extract based on non-duplicate names on column 1</h5>
 
 ```
