@@ -1,4 +1,11 @@
 # cheatsheet
+
+<h5>Remove duplicate fasta entries</h5>
+
+```
+awk 'NR==FNR{L[$0]=FNR; next} L[$0]==FNR' probes_FLandPM.fasta probes_FLandPM.fasta > probes_FLandPM_uniq.fasta
+```
+
 <h5>Get maximum value in a column</h5>
 
 ```
