@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Sort by numeric values on column 16</h5>
+
+```
+sort -nk16 newdata.txt
+```
 
 <h5>Remove duplicate fasta entries</h5>
 
