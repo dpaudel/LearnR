@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Extract columns on 1 file based on ids on another file</h5>
+
+```
+grep -Fwf ids.txt table.txt
+```
+
 <h5>Sort by numeric values on column 16</h5>
 
 ```
