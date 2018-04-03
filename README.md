@@ -482,7 +482,7 @@ perl -ne 'print if( (/@/ && ($end=1))..!$end-- )' C7U82ANXX_7_fastq | grep -v "@
 ```
 #Use stacks instead :)
 
-<h5>Get names of progenies from all files to be used in STACKS</h5>
+<h5>Get the names of progenies from all files to be used in STACKS</h5>
 
 ```
 for i in *.fq; do echo -n " -r ./samples_7/$i"; done
