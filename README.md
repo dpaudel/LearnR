@@ -1,12 +1,4 @@
 # cheatsheet
-<h5>Add images in Rmd</h5>
-```
-```{r, fig.caption="Image of peeled orange with globe"}
-knitr::include_graphics("../fig/orange-peel-earth.jpg")
-```
-Image source: [Image of earth] (http://blogs.lincoln.ac.nz/gis/2017/03/29/where-on-earth-are-we/)
-
-```
   
 <h5>Extract columns on 1 file based on ids on another file</h5>
 
