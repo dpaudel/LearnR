@@ -7,6 +7,12 @@ p <- ggplot(cars, aes(x=speed, y=dist))+ geom_point()
 p + annotate("text", x = 20, y = 125, label = "italic(R) ^ 2 == 0.75", parse=TRUE)
 ```
 
+```
+lb1 <- paste("R^2 == ", round(runif(1),4))
+qplot(1:10, 1:10) + 
+  annotate("text", x=2, y=8, label=lb1, parse=TRUE)
+```
+  
 <h5>Extract columns on 1 file based on ids on another file</h5>
 
 ```
