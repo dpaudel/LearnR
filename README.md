@@ -1,5 +1,12 @@
 # cheatsheet
   
+<h5>Superscript annotation in plot in R </h5>
+
+```
+p <- ggplot(cars, aes(x=speed, y=dist))+ geom_point()
+p + annotate("text", x = 20, y = 125, label = "italic(R) ^ 2 == 0.75", parse=TRUE)
+```
+
 <h5>Extract columns on 1 file based on ids on another file</h5>
 
 ```
