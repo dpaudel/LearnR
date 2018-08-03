@@ -1,6 +1,7 @@
 # cheatsheet
   
 <h5>Sort based on 1st and 2nd column</h5>
+
 ```
 sort -k 1,1 -k2,2n file
 ```
