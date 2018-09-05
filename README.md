@@ -1,5 +1,13 @@
 # cheatsheet
   
+  <h5>Fix font issues with uf theme</h5>
+
+```
+library(extrafont)
+loadfonts(device = "win")
+windowsFonts(Arial=windowsFont("TT Arial"))
+```
+  
 <h5>Sort based on 1st and 2nd column</h5>
 
 ```
