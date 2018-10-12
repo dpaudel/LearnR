@@ -1,6 +1,12 @@
 # cheatsheet
-  
-  <h5>Fix font issues with uf theme</h5>
+ 
+ <h5>SLURM dependency submit job after previous completes </h5>
+ 
+ ```
+ sbatch --dependency=afterok:11254323 job2.sh
+ ```
+ 
+ <h5>Fix font issues with uf theme</h5>
 
 ```
 library(extrafont)
