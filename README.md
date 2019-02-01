@@ -1,5 +1,11 @@
 # cheatsheet
 
+<h5>cat lines at end of each corresponding line</h5>
+
+```
+paste -d '' file1.fas file2.fas
+```
+
 <h5>Get file structure tree in MS-DOS</h5>
 
 ```
