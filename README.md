@@ -1,5 +1,11 @@
 # cheatsheet
- 
+
+<h5>Get file structure tree in MS-DOS</h5>
+
+```
+tree > tree_structure.txt /A /F
+```
+
  <h5>SLURM dependency submit job after previous completes </h5>
  
  ```
