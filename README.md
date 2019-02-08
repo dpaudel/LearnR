@@ -1,5 +1,12 @@
 # cheatsheet
 
+<h5>Detach packages (when dplyr summarize is not working properly)</h5>
+```
+detach(package:ggbiplot)
+detach(package:plyr)
+tifton_db %>% group_by(Species, Trait) %>% summarize(Min = min(Value, na.rm=TRUE), Max = max(Value, na.rm=TRUE), Avg = mean(Value, na.rm=TRUE))
+```
+
 <h5>cat lines at end of each corresponding line</h5>
 
 ```
