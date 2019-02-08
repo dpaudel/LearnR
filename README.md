@@ -1,6 +1,7 @@
 # cheatsheet
 
 <h5>Detach packages (when dplyr summarize is not working properly)</h5>
+
 ```
 detach(package:ggbiplot)
 detach(package:plyr)
