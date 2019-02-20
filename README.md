@@ -1,4 +1,9 @@
 # cheatsheet
+<h5>Generate random integers from 1 to 5 </h5>
+
+```
+sample(1:5,5,replace=F) 
+```
 
 <h5>Detach packages (when dplyr summarize is not working properly)</h5>
 
