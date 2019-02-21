@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Find Entires that do not have NA in Source colum </h5>
+
+```
+db_appc_uf %>% filter(is.na(Source)) %>% select(Species, Entry) %>% unique()
+```
+
 <h5>Bind rows when columns are not equal = absent cols will be filled with NA</h5>
 
 ```
