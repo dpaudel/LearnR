@@ -1,4 +1,10 @@
 # cheatsheet
+<h5>Bind rows when columns are not equal = absent cols will be filled with NA</h5>
+
+```
+db_appc_uf <- bind_rows(ufdbb, ufdbp, ufdbs, ufdbz) # binds rows when columns are not equal
+```
+
 <h5>Generate random integers from 1 to 5 </h5>
 
 ```
