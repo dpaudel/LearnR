@@ -1,4 +1,12 @@
 # cheatsheet
+<h5>Multiple ANOVA's at the same time</h5>
+
+```
+formula <- as.formula(paste0("cbind(", paste(names(cs_spread)[7:9], collapse = ","), ") ~ Entry"))
+fit <- aov(formula, data=cs_spread)
+summary(fit)
+```
+
 <h5>Find Entires that do not have NA in Source colum </h5>
 
 ```
