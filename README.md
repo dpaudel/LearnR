@@ -1,5 +1,11 @@
 # cheatsheet
-<h5>Multiple ANOVA's at the same time</h5>
+<h5> Rotate x-axis label </h5>
+
+```
+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+<h5> Multiple ANOVA's at the same time</h5>
 
 ```
 formula <- as.formula(paste0("cbind(", paste(names(cs_spread)[7:9], collapse = ","), ") ~ Entry"))
