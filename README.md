@@ -1,4 +1,11 @@
 # cheatsheet
+
+<h5>Export ANOVA aov results in tabular form</h5>
+
+```
+xtable(summary(aov1)) %>% copy2clipboard()
+```
+
 <h5> Rotate x-axis label </h5>
 
 ```
