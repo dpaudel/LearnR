@@ -1,4 +1,11 @@
 # cheatsheet
+<h5> Extract first 3 pages of a pdf</h5>
+
+```
+for i in *.pdf;
+do pdftk $i cat 1-3 output out_$i;
+done
+```
 
 <h5>Export ANOVA aov results in tabular form</h5>
 
