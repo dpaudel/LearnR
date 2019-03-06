@@ -1,4 +1,10 @@
 # cheatsheet
+<h5> Merge multiple pdf into single pdf</h5>
+
+```
+pdftk out*.pdf cat output merged_publications_3pages.pdf
+```
+
 <h5> Extract first 3 pages of a pdf</h5>
 
 ```
