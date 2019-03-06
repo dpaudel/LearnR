@@ -2,6 +2,7 @@
 <h5> Extract first 3 pages of a pdf</h5>
 
 ```
+#sudo apt install pdftk tree
 for i in *.pdf;
 do pdftk $i cat 1-3 output out_$i;
 done
