@@ -1,4 +1,10 @@
 # cheatsheet
+<h5> Convert pdf to png </h5>
+
+```
+convert -density 300 dpaudel_PHD_diploma.pdf -resize 25% a.png
+```
+
 <h5> Merge multiple pdf into single pdf</h5>
 
 ```
