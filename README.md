@@ -1,4 +1,12 @@
 # cheatsheet
+
+<h5> Count number of NAs in each column of dataframe</h5>
+
+```
+na_count <-sapply(data, function(y) sum(length(which(is.na(y)))))
+na_count <- data.frame(na_count)
+```
+
 <h5> Convert pdf to png </h5>
 
 ```
