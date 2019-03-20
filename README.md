@@ -1,5 +1,13 @@
 # cheatsheet
 
+<h5> Extract linear model equation </h5>
+
+```
+lm1 <- lm(TQ~CoveragePercent, data=grass)
+cc <- lm1$coefficients
+(eqn <- paste("Y =", paste(round(cc[1],2), paste(round(cc[-1],2), names(cc[-1]), sep=" * ", collapse=" + "), sep=" + "), "+ e"))
+```
+
 <h5> Count number of NAs in each column of dataframe</h5>
 
 ```
