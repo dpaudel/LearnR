@@ -1,4 +1,9 @@
 # cheatsheet
+<h5> Extract every 2 lines in fasta file </h5>
+
+```
+for i in {1..25}; do let "j=i*2"; head -n $j isolate.fasta | tail -n 2 > sample_$i.fasta; done
+```
 
 <h5> Extract linear model equation </h5>
 
