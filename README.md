@@ -1,4 +1,11 @@
 # cheatsheet
+<h5>Summarise data frames in R</h5>
+
+```
+library(summarytools)
+view(dfSummary(tamu_paspalum))
+```
+
 <h5> Extract every 2 lines in fasta file </h5>
 
 ```
