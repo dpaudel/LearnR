@@ -1,4 +1,11 @@
 # cheatsheet
+
+<h5>Load multiple packages at the same time</h5>
+
+```
+Packages <- c("dplyr", "ggplot2", "dpaudelR", "agricolae")
+lapply(Packages, library, character.only = TRUE)
+```
 <h5>Summarise data frames in R</h5>
 
 ```
