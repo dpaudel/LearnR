@@ -1,5 +1,14 @@
 # cheatsheet
 
+<h5>Fixed barplot width when missing data</h5>
+
+```
+ggplot(data=hert, aes(x=Site, y=Heritability, fill=Species)) +
+  geom_bar(stat="identity", color="black", position=position_dodge2(preserve = "single"), width=0.8)+
+  theme_uf()+
+  scale_color_colorblind()
+```
+
 <h5>Load multiple packages at the same time</h5>
 
 ```
