@@ -1,5 +1,15 @@
 # cheatsheet
 
+<h5>Tukey HSD with interaction for multiple factors </h5>
+
+```
+yield <- copyFromExcel()
+int_all <- with(yield, interaction(Hybrid, Exp))
+aov1 <- aov(TestWeight~int_all, data=yield)
+summary(aov1)
+(HSD.test(aov1, "int_all", group=TRUE))
+```
+
 <h5>Fixed barplot width when missing data</h5>
 
 ```
