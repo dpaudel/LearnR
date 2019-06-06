@@ -4,7 +4,7 @@
 
 ```
 yield <- copyFromExcel()
-int_all <- with(yield, interaction(Hybrid, Exp))
+int_all <- interaction(yield$Hybrid, yield$Exp)
 aov1 <- aov(TestWeight~int_all, data=yield)
 summary(aov1)
 (HSD.test(aov1, "int_all", group=TRUE))
