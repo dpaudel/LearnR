@@ -1,5 +1,11 @@
 # cheatsheet
 
+<h5>Convert .pdf to .png with high resoulution using imagemagick</h5>
+
+```
+convert -density 300 -trim file1.pdf -quality 100 file1.png
+```
+
 <h5>Tukey HSD with interaction for multiple factors </h5>
 
 ```
