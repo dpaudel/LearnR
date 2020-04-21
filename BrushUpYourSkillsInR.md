@@ -19,7 +19,7 @@ suppressPackageStartupMessages({
 ```
 
 # Topic 1: RCBD (Randomized Complete Block Design) one way ANOVA
-#----------------------------------------------------- #
+
 ```
 rm(list = ls())
 setwd("C:/Users/dpaudel/Downloads/R demo")
@@ -27,66 +27,77 @@ bean <- read.table("bean.txt",header=T)
 head(bean)
 str(bean) # data structure
 ```
-# Anova
+### Anova
+```
 aov.bean <- aov(tons ~ block + cultivar, data=bean)
 anova(aov.bean) 
+```
 
-
-## transform block and cultivas as factor
+### transform block and cultivas as factor
+```
 bean1 <- transform(bean, block=factor(block), cultivar=factor(cultivar))
 str(bean1)
 head(bean1)
-
-# ANOVA
+```
+### ANOVA
+```
 aov.bean1 <- aov(tons ~ block + cultivar, data=bean1)
 anava <- anova(aov.bean1) 
+```
 
+### Normality of the error distributions 
 
-# Normality of the error distributions  ------------------# 
-
-# capture residuals
+##### capture residuals
+```
 res.bean <- aov.bean1$residuals 
+```
+##### Shapiro- Wilk test (observation: until 5000 observations)
+```shapiro.test(res.bean) ```
 
-# Shapiro- Wilk test (observation: until 5000 observations)
-shapiro.test(res.bean) 
-
-# QQ-plot 
+##### QQ-plot 
+```
 qqplot <- qqnormPlot(res.bean) 
 cor(qqplot$x,qqplot$y, method = "pearson")
+```
 
+### Homoscedasticity
 
-# Homoscedasticity ---------------------------------------#
+##### Option 1: Anscombe & Tukey's Homoscedasticity test
 
-# Option 1: Anscombe & Tukey's Homoscedasticity test
-
+```
 attach(bean1)
 # anscombetukey(resp, trat, block, glres, msres, sstrat, ssblock, residuals, fitted.values)
 anscombetukey(tons, cultivar, block, anava[3,1], anava[3,3], anava[2,2], anava[1,2], aov.bean1$residuals, aov.bean1$fitted.values)
-
-# Option 2: Bartlett's Test
+```
+##### Option 2: Bartlett's Test
+```
 bartlett.test(tons ~ cultivar, data = bean1)
 bartlett.test(tons ~ block, data = bean1)
+```
+##### Option 3: Graphic option with boxplot
 
-# Option 3: Graphic option with boxplot
-# variance across cultivars
-boxplot(bean$tons ~ bean$cultivar)
+**Variance across cultivars**
+```boxplot(bean$tons ~ bean$cultivar)```
 
-# variance across blocks
-boxplot(bean$tons ~ bean$block)
+**variance across blocks**
+```boxplot(bean$tons ~ bean$block)```
 
-# predicted vs actual plot
+### predicted vs actual plot
+```
 par(mfrow = c(2, 2))
 plot(aov.bean1); layout(1)
+```
 
-
-# Tukey's honestly significant difference (HSD) post hoc test (agricolae package)
+### Tukey's honestly significant difference (HSD) post hoc test (agricolae package)
+```
 post_hoc <- HSD.test(aov.bean1,"cultivar", group=T)
 plot(post_hoc, las=1 , col="brown",main = "Test Tukey - Bean Trial") # las=1 --> vertical label axis style
-
-# Tukey's test (Stats package)
+```
+Tukey's test (Stats package)
+```
 post_hoc2 <- TukeyHSD(x=aov.bean1,"cultivar", conf.level=0.95)
 plot(post_hoc2 , las=1 , col="brown")
-
+```
 
 # ExpDes function
 rbd(bean$cultivar, bean$block, bean$tons, quali = TRUE, mcomp = "tukey", nl = FALSE, hvar='oneillmathews', sigT = 0.05, sigF = 0.05)
