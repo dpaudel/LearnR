@@ -1,3 +1,17 @@
+### Split plot RCB
+
+```
+#### correct method ####
+bake <- read.table("https://online.stat.psu.edu/onlinecourses/sites/stat502/files/lesson08/baketime_data.txt", header=T)
+head(bake)
+bake_exp <- ExpDes::split2.rbd(bake$temp, bake$time, bake$rep, bake$resp, fac.names=c('temp','time')) # correct
+bake1 <- transform(bake, rep=factor(rep), temp=factor(temp),time=factor(time))
+bake_aov1 <- aov(resp~temp*time+Error(rep/temp/time), data=bake1)
+summary(bake_aov1)
+```
+
+
+
 ##ANOVA as a Split Plot RIGHT MODEL
 
 ```
