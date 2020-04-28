@@ -1,5 +1,5 @@
 # Split plot RCB
-
+https://online.stat.psu.edu/stat502
 ```
 #### correct method ####
 bake <- read.table("https://online.stat.psu.edu/onlinecourses/sites/stat502/files/lesson08/baketime_data.txt", header=T)
