@@ -21,8 +21,8 @@ suppressPackageStartupMessages({
 # Topic 1: RCBD (Randomized Complete Block Design) one way ANOVA
 
 ```
-rm(list = ls())
-setwd("C:/Users/dpaudel/Downloads/R demo")
+# rm(list = ls())
+# setwd("C:/Users/dpaudel/Downloads/R demo")
 bean <- read.table("bean.txt",header=T)
 head(bean)
 str(bean) # data structure
