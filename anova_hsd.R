@@ -25,8 +25,14 @@ anova_hsd <- function (user_model, datafile){
   user_treatment <- as.character(formula(user_model))[2]
   user_group <- as.character(formula(user_model))[3]
   datafile <- datafile %>% mutate_at(user_group, as.factor) %>% mutate_at(user_treatment, as.numeric)
-
+  
   aov1 <- aov(model1a, data=datafile)
+
+# ANOVA Assumptions
+  par(mfrow=c(2,2))
+  plot(aov1)
+
+# print ANOVA results
   print("ANOVA table")
   aov1_summary <- summary(aov1)
   capture.output(aov1_summary, file = "results_anova.txt")
@@ -46,14 +52,14 @@ anova_hsd <- function (user_model, datafile){
   data_merged <- dplyr::left_join(data_stats, order_aov1)
   capture.output(data_merged, file = "results_hsd.txt")
   print(data_merged)
-
+  
 ## Plotting 
-
+  
 # Create standard error bars for plots
   yerr_names1 <- colnames(data_merged)[c(3,5)]
   yerrbar1 <- aes_string(ymin = paste(yerr_names1, collapse = '-'), 
                          ymax = paste(yerr_names1,collapse='+'))
-
+  
 # Nudge amount for extreme cases
   nudge_amt <- 0
   if (mean(data_merged$se, na.rm=T) < 1){
@@ -74,8 +80,8 @@ anova_hsd <- function (user_model, datafile){
 }
 
 #### Run the program ####
+
 # read data file
 data1 <- read.csv("iris.csv")
 # run the program
 anova_hsd("Petal.Length~Species", data1)
-
