@@ -1,10 +1,11 @@
 # Title: Anova HSD and Barplotter
 # Version: 0.1
 # Authors: Dev Paudel, email="dpaudel@outlook.com"
-# Description: Given a dataset and linear model, the program runs ANOVA, HSD, and plots a barplot
+# Description: Given a dataset and linear model, the program runs ANOVA, HSD, and plots a barplot with standard errors
 # Depends: R (>= 3.1.0)
 # License: CC0
-# Example: anova_hsd("Petal.Width~Species", dataname)
+# Syntax: anova_hsd("DependentVariable~IndependentVariable", data)
+# Example: anova_hsd("Petal.Length~Species", iris)
 
 # The codes will let users select a .csv file and run an ANOVA analysis with HSD ranking
 
@@ -15,7 +16,7 @@ if(!require(agricolae))install.packages("agricolae")
 if(!require(dplyr))install.packages("dplyr")
 if(!require(ggplot2))install.packages("ggplot2")
 
-#### Function to calculate anova and plot results ####
+#### Function to calculate ANOVA and plot results ####
 
 ## ANOVA and HSD
 # define function for anova
@@ -36,9 +37,6 @@ anova_hsd <- function (user_model, datafile){
   
 # Sort
   order_aov1 <- hsd_aov1$groups[order(rownames(hsd_aov1$groups)),]
-  
-# Add column name
-  order_aov1$Species <- rownames(order_aov1)
   
 # Get summary statistics from Rmisc package
   data_stats <- Rmisc::summarySE(datafile, measurevar= user_treatment , groupvars= user_group, na.rm=TRUE)
@@ -70,15 +68,14 @@ anova_hsd <- function (user_model, datafile){
     geom_text(nudge_y=nudge_amt, label=data_merged$groups,  size=4) +
     ggtitle("HSD grouping")+
     theme_bw()
-  print(plot1)
+  return(plot1)
   plotname=paste0('plot_',user_treatment,"_",user_group,".png")
   ggsave(filename = plotname, width=7, height=5.5, dpi=300)
 }
-
 
 #### Run the program ####
 # read data file
 data1 <- read.csv("iris.csv")
 # run the program
 anova_hsd("Petal.Length~Species", data1)
-anova_hsd("Petal.Length~Petal.Width", data1)
+
