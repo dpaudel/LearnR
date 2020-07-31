@@ -11,11 +11,8 @@
 
 #### Installation of required packages ####
 # Install required packages if they are not already installed.
-if(!require(Rmisc))install.packages("Rmisc")
-if(!require(agricolae))install.packages("agricolae")
-if(!require(dplyr))install.packages("dplyr")
-if(!require(ggplot2))install.packages("ggplot2")
-
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load('Rmisc', 'agricolae', 'dplyr', 'ggplot2')
 #### Function to calculate ANOVA and plot results ####
 
 ## ANOVA and HSD
