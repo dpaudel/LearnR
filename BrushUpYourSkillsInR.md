@@ -100,12 +100,14 @@ plot(post_hoc2 , las=1 , col="brown")
 ```
 
 # ExpDes function
+```
 rbd(bean$cultivar, bean$block, bean$tons, quali = TRUE, mcomp = "tukey", nl = FALSE, hvar='oneillmathews', sigT = 0.05, sigF = 0.05)
-
+```
 
 # ggplot visualization means + letter from  tukey test
 
 # Creating data frame with cultivars, means and letters from tukey test 
+```
 result <- post_hoc$groups
 Cultivar <- rownames(result)
 result <- cbind(result, Cultivar)
@@ -113,31 +115,36 @@ result$groups <- as.character(result$groups)
 groups <- result$groups
 head(result)
 str(result) # data structure
-
+```
 # First layer of the Graph
+```
 bean_graph <- ggplot(result, aes(x=Cultivar, y=tons, fill=Cultivar)) +
   geom_bar(stat="identity", position=position_dodge()) 
-
+```
 # add letter
+```
 bean_graph <-  bean_graph + geom_text(aes(label = groups, y = tons + 0.1), position = position_dodge(0.9),vjust = 0)  
-
+```
 #add title, axis labels and theme
+```
 bean_graph <- bean_graph + labs(title= "Trial Bean 2018", y = expression(tons/~ha**-1))+
   theme_bw() # + theme(legend.position="none") #* remove legend if you want
-
+```
+```
 bean_graph
-
+```
 
 # save plot with with resolution 
+```
 tiff("bean_trial_plot.tiff", width = 5, height = 4, units = 'in', res = 400) # can use png as well
 bean_graph
 dev.off() # save on your directory
-
+```
 
 
 
 #### Topic 2: RCBD Split plot ####
-
+```
 #----------------------------------------------------  #
 rm(list=ls())
 bean_ph <- read.table("bean_phosphorus.txt",h=T)
@@ -168,10 +175,10 @@ plot(model); layout(1)
 library(ExpDes)
 # fat2.rbd(factor1, factor2, block, resp, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
 b_ph <- fat2.rbd(bean_ph$cultivar, bean_ph$P, bean_ph$Rep, bean_ph$tons, quali = c(TRUE, TRUE), mcomp = "sk", fac.names = c("Progenies", "Phosphorus"), sigT = 0.05, sigF = 0.05)
-
+```
 
 #- Create an graph with the results ---------------------------# 
-
+```
 # Standart error function
 s_error <- function(x){ 
   sd(x)/sqrt(length(x))}  
@@ -209,11 +216,11 @@ b_ph_plot <- b_ph_plot + labs(title= "Trial: Bean vs Phosphorus", y = expression
   theme_bw() # + theme(legend.position="none") #* remove legend if you want
 
 b_ph_plot
-
+```
 
 
 # Topic 3:  RCBD Strip plot (repeated measure in time)
-
+```
 #------------------------------------------------------------#
 rm(list=ls())
 turf <- read.csv("turf.csv",h=T)
@@ -275,6 +282,6 @@ turf_plot
 tiff("turf_plot.tiff", width = 10, height = 6, units = 'in', res = 400) 
 turf_plot
 dev.off() # 
-
+```
 
 
