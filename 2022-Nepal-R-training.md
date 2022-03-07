@@ -12,9 +12,8 @@ Install R completely before installing Rstudio.
 
 Create a folder / directory on your _Desktop_ and name it _RLab_.
 
-Download the files _Wheat_91.txt_ and _wheatc.csv_ and move them inside _RLab_ folder.
+Download the files wheatc.csv (https://raw.githubusercontent.com/dpaudel/LearnR/master/wheatc.csv) and Wheat_91.txt (https://raw.githubusercontent.com/dpaudel/LearnR/master/Wheat_91.txt) save them inside _RLab_ folder.
 
 To download these files: 
-1. Click on the file
-2. Once the file opens on your browser, click **Raw**
-3. Right-click on your mouse/trackpad and click _Save as_ and save to the _RLab_ folder.
+1. Click on the link
+2. Once the file opens on your browser, right-click on your mouse/trackpad and click _Save as_ and save to the _RLab_ folder.
