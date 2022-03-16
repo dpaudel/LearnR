@@ -1,0 +1,85 @@
+---
+title: "Basic R training"
+author: "Anil Adhikari"
+date: "3/13/2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+# Data input in R
+There are three different ways of data input into R.
+
+- Use RStudio features - Method 1.  
+File > Open file > [select the file you want to input]
+
+- Use RStudio features - Method 2.  
+File > Import Dataset > From CSV / From Excel > specify input features
+
+- Using R commands.  
+Naviagte to the directory with data files and use appropriate commands.  
+
+
+```{r}
+# check your working directory
+getwd()
+
+# set your working directory to the folder with data files
+setwd("/Users/aniladhikari/Desktop/RLab")
+
+# View the file names
+list.files()
+
+# Use correct file name to run input commands
+dat1 <- read.csv("Wheatc.csv")
+
+# For text files
+dat2 <- read.table("Wheat_91.txt", sep = "\t", header = TRUE)
+```
+
+# Data exploratory analysis 
+1. Check if the data is in correct format. For example, check for typos, alphabets in place of numbers, missing row column names, missing data etc.
+
+2. Check the distribution of data for outliers. There can be two types of outliers, true outliers, outliers due to inaccuracy in data collection, input, unit differences etc. We should try to see if there are any outliers of the second kind and rectify them.
+
+```{r}
+# checking data for correct data type and format
+head(dat1)
+
+# check data types in each columns
+str(dat1)
+
+# check for missing data
+table(is.na(dat1))
+```
+
+```{r}
+# checking for data accuracy
+
+# basic histogram for distribution
+hist(dat1$yield, main = "Yield ~ variety", xlab = "yield")
+```
+```{r}
+# create a boxplot
+library(ggplot2)
+ggplot(dat1, aes(x=variety, y=yield, fill = variety)) +
+  geom_boxplot()
+```
+# Analysis of variance  
+```{r}
+model1 <- lm(yield ~ variety, data = dat1)
+anova(model1)
+```
+# check model fit
+```{r}
+plot(model1)
+```
+# mean separation
+```{r}
+install.packages("agricolae")
+library("agricolae")
+
+# Tukey's HSD
+HSD.test(model1,"variety", alpha = 0.05, group = TRUE)
+
+```
+
