@@ -20,7 +20,8 @@ To download these files:
 
 Installation of packages:
 Open RStudio
-On the console type the following and Run
+
+On the _console_ type the following and press _Run_
 ```
 install.packages("dplyr")
 install.packages("ggplot2")
