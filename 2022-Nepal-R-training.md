@@ -31,3 +31,12 @@ For future use
 ```
 install.packages("tidyverse")
 install.packages("readxl")
+```
+Installed packages can be loaded by calling ```library```
+```
+library(readxl)
+```
+or by using ::
+```
+readxl::read_excel("excelfile.xlsx")
+```
