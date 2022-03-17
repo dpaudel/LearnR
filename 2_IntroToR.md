@@ -1,10 +1,3 @@
-######################################
-## INTRODUCTION TO R SOFTWARE       ##
-## AGR 5266C: Field Plot Techniques ##
-## FALL 2018                        ##
-## rramadeu at ufl dot edu          ##  
-######################################
-
 ## Before Start
 ## Create a folder for your project
 ## Example: ~/Desktop/RLab
