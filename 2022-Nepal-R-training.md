@@ -36,7 +36,7 @@ Installed packages can be loaded by calling ```library```
 ```
 library(readxl)
 ```
-or by using ::
+or by using ```::```
 ```
 readxl::read_excel("excelfile.xlsx")
 ```
