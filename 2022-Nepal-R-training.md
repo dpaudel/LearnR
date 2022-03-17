@@ -19,7 +19,7 @@ To download these files:
 2. Once the file opens on your browser, right-click on your mouse/trackpad and click _Save as_ and save to the _RLab_ folder.
 
 Installation of packages:
-Oper RStudio
+Open RStudio
 On the console type the following and Run
 ```
 install.packages("dplyr")
