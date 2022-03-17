@@ -5,8 +5,8 @@ Date: Friday, March 18, 2022, 8:30 PM EST - 10:30 PM EST
 ## Setup Instructions
 
 Before the class, download and install the following two software in order:
-1. R (https://www.r-project.org/)
-2. Rstudio (https://www.rstudio.com/products/rstudio/download/)
+1. R (https://cloud.r-project.org/)
+2. Rstudio (https://www.rstudio.com/products/rstudio/download/#download)
 
 Install R completely before installing Rstudio.
 
@@ -17,3 +17,17 @@ Download the files wheatc.csv (https://raw.githubusercontent.com/dpaudel/LearnR/
 To download these files: 
 1. Click on the link
 2. Once the file opens on your browser, right-click on your mouse/trackpad and click _Save as_ and save to the _RLab_ folder.
+
+Installation of packages:
+Oper RStudio
+On the console type the following and Run
+```
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("agricolae")
+```
+
+For future use
+```
+install.packages("tidyverse")
+install.packages("readxl")
