@@ -21,12 +21,13 @@ To download these files:
 Installation of packages:
 Open RStudio
 
-On the _console_ type the following and press _Run_
+On the _console_ type the following and press _Run_ or _Ctrl+Enter_
 ```
 install.packages("dplyr")
 install.packages("ggplot2")
 install.packages("agricolae")
 ```
+These packages will be used in the training program.
 
 For future use
 ```
