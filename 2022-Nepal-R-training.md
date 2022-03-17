@@ -1,5 +1,6 @@
 # Introductory Data Analysis in R
 Date: Friday, March 18, 2022, 8:30 PM EST - 10:30 PM EST 
+Nepal Date: Saturday, March 19, 2022, 7:15 AM - 9:15 AM (Chaitra 5, 2078)
 ### Instructors: Dr. Anil Adhikari, Dr. Dev Paudel
 ---
 ## Setup Instructions
