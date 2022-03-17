@@ -1,10 +1,10 @@
 ---
 title: "Basic R training"
-author: "Anil Adhikari"
+author: "Anil Adhikari and Dev Paudel"
 date: "3/13/2022"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 # Data input in R
 There are three different ways of data input into R.
@@ -64,22 +64,50 @@ library(ggplot2)
 ggplot(dat1, aes(x=variety, y=yield, fill = variety)) +
   geom_boxplot()
 ```
+
 # Analysis of variance  
+
 ```{r}
 model1 <- lm(yield ~ variety, data = dat1)
 anova(model1)
 ```
-# check model fit
+
+# check model fit  
+
 ```{r}
-plot(model1)
+plot(model1$residuals)
 ```
-# mean separation
+
+# Post-hoc mean comparison  
+
 ```{r}
-install.packages("agricolae")
-library("agricolae")
+library(agricolae)
 
 # Tukey's HSD
-HSD.test(model1,"variety", alpha = 0.05, group = TRUE)
+HSD <- HSD.test(model1,"variety", alpha = 0.05, group = TRUE)
+HSD
+```
+```{r}
+# LSD test
+out<-LSD.test(model1,"variety")
+out
+```
+```{r}
+# graphical representation
+plot(out,variation="SD") # variation standard deviation
+```
+```{r}
+# bar graphs with SD
+# extract means and SD
+Means <-out$means$yield
+SD <- out$means$std
 
+library(tidyverse)
+tbl <- tibble(Variety = rownames(out$means), Means = Means, SD = SD)
+
+ggplot(tbl, aes(x = Variety, y=Means, fill = Variety)) + 
+  geom_bar(stat = "identity", width = 0.7, color = "black") + 
+  geom_errorbar(aes(ymin = Means - SD, ymax = Means + SD), width = 0.2) + 
+  theme_minimal()
 ```
 
