@@ -1,4 +1,3 @@
-```
 #### Begin R ####
 # set working directory, this is where our data analysis will occur
 
@@ -92,4 +91,4 @@ wheat <- read.csv("https://raw.githubusercontent.com/dpaudel/LearnR/master/wheat
 
 ####SUMMARY####
 
-```
+
