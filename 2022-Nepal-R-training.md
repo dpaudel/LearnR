@@ -50,4 +50,4 @@ RCBD dataset: https://raw.githubusercontent.com/dpaudel/LearnR/master/Breed_RCBD
 
 Scripts used in session 1: https://raw.githubusercontent.com/dpaudel/LearnR/master/NAPA-practice-session1.md
 
-Scripts used in session 2: https://github.com/dpaudel/LearnR/blob/master/NAPA-practice-session2.R
+Scripts used in session 2: https://raw.githubusercontent.com/dpaudel/LearnR/master/NAPA-practice-session2.R
