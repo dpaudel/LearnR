@@ -47,3 +47,5 @@ readxl::read_excel("excelfile.xlsx")
 Practice session 1: (https://raw.githubusercontent.com/dpaudel/LearnR/master/NAPA-practice-session.R)
 
 RCBD dataset: https://raw.githubusercontent.com/dpaudel/LearnR/master/Breed_RCBD.csv
+
+Scripts used in session 1: https://raw.githubusercontent.com/dpaudel/LearnR/master/NAPA-practice-session1.md
